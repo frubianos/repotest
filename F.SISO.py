@@ -1,4 +1,37 @@
 # MISO MMH 20241217
+"""
+
+Modelo SISO Discreto para Hidrología
+
+Ecuación:
+    Q(k) = b_0 * P(k - δ) - a_1 * Q(k - 1)
+
+Descripción:
+    Este modelo representa la relación entre la precipitación (P) y el caudal (Q) en una cuenca, 
+    considerando un retardo temporal δ en la respuesta de la precipitación y la dependencia del 
+    caudal previo. Es una implementación discreta del modelo SISO (Single Input, Single Output).
+
+Parámetros:
+    - Q(k): Caudal en el tiempo actual k.
+    - P(k - δ): Precipitación en el tiempo k - δ, considerando el retardo δ.
+    - Q(k - 1): Caudal en el tiempo anterior k - 1.
+    - b_0: Coeficiente que relaciona la precipitación con el caudal.
+    - a_1: Coeficiente que relaciona el caudal previo con el actual.
+
+Aplicación:
+    - Simulación de la respuesta hidrológica de una cuenca.
+    - Gestión de recursos hídricos y control de inundaciones.
+    - Análisis de eventos de lluvia y su impacto en caudales.
+
+Nota:
+    Asegúrese de calibrar los coeficientes b0, a_1 y el retardo δ (delta1)  con datos históricos de la cuenca.
+POr favor escribame si tiene alguna duda escribame seguro sus ideas complementaran este desarrollo
+frubianos@unal.edu.co 
+linkedin profile : https://www.linkedin.com/in/fabio-rubiano-s%C3%A1nchez-87603a79/
+
+
+    
+"""
 
 from cycler import K
 import numpy as np
